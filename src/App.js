@@ -1,4 +1,4 @@
-import {component} from 'react'
+import {Component} from 'react'
 import {v4 as uuid} from 'uuid'
 import Tasks from './components/Tasks'
 
@@ -14,7 +14,7 @@ import {
   AddButton,
   TagsHeading,
   TagsContainer,
-  TaskaContainer,
+  TaskContainer,
   TagsButton,
   TagListItem,
   NoTaskText,
