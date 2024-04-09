@@ -1,4 +1,4 @@
-import {TaskName, TagsCategory, ListItem} from './istyle'
+import {TaskName, TagsCategory, ListItem} from './style'
 
 const Tasks = props => {
   const {taskDetails} = props
