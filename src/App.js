@@ -47,7 +47,7 @@ const tagsList = [
   },
 ]
 
-class App extends Components {
+class App extends Component {
   state = {
     myTaskList: [],
     inputTask: '',
