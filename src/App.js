@@ -14,7 +14,7 @@ import {
   AddButton,
   TagsHeading,
   TagsContainer,
-  TaskContainer,
+  TasksContainer,
   TagsButton,
   TagListItem,
   NoTaskText,
@@ -62,16 +62,14 @@ class App extends Component {
     const id = uuid()
     const bgColor = false
 
-    if (taskName.length === 0) {
-      this.setState(prevState => ({
-        myTaskList: [
-          ...prevState.myTaskList,
-          {id, taskName, taskCategory, bgColor},
-        ],
-        inputTask: '',
-        selectTag: tagsList[0].optionId,
-      }))
-    }
+    this.setState(prevState => ({
+      myTaskList: [
+        ...prevState.myTaskList,
+        {id, taskName, taskCategory, bgColor},
+      ],
+      inputTask: '',
+      selectTag: tagsList[0].optionId,
+    }))
   }
 
   onChangeInputTask = event => {
@@ -96,7 +94,7 @@ class App extends Component {
     const filterTaskList =
       activeTag === 'INITIAL'
         ? myTaskList
-        : myTaskList.filter(each.taskCategory === activeTag)
+        : myTaskList.filter(each => each.taskCategory === activeTag)
 
     return (
       <MainContainer>
@@ -151,7 +149,7 @@ class App extends Component {
             {filterTaskList.length === 0 ? (
               <NoTaskText>No Tasks Added Yet</NoTaskText>
             ) : (
-              filterTaskList.map(eacTask => (
+              filterTaskList.map(eachTask => (
                 <Tasks key={eachTask.id} taskDetails={eachTask} />
               ))
             )}

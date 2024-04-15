@@ -136,3 +136,11 @@ export const TasksContainer = styled.ul`
   margin: 5px;
   width: 90%;
 `
+
+export const TagsHeading = styled.h1`
+  color: #f3aa4e;
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px;
+`
