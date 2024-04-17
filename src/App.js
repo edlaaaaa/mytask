@@ -147,12 +147,11 @@ class App extends Component {
           <TagsHeading>Tasks</TagsHeading>
           <TasksContainer>
             {filterTaskList.length === 0 ? (
-              <NoTaskText>No Tasks Added Yet</NoTaskText>
+              <NoTaskTest>No Tasks Added Yet</NoTaskTest>
             ) : (
               filterTaskList.map(eachTask => (
                 <Tasks key={eachTask.id} taskDetails={eachTask} />
               ))
-            )}
             )}
           </TasksContainer>
         </TaskDisplayContainer>
