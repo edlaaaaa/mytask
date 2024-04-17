@@ -17,7 +17,7 @@ import {
   TasksContainer,
   TagsButton,
   TagListItem,
-  NoTaskText,
+  NoTaskTest,
 } from './style'
 
 const tagsList = [
